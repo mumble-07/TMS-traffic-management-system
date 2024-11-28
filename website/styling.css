@@ -1,0 +1,97 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+  background-color: #0a3b63;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 4fr 4fr; /* Left: Charts, Right: Videos */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Left Panel: Charts */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Iframe Styling */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 52.75%; /* 16:9 Aspect Ratio */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Right Panel: Video Feeds */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr; /* Stack panels vertically on smaller screens */
+  }
+
+  .iframe-container {
+    padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+  }
+}

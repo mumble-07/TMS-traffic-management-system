@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Frequency Dashboard</title>
+    <!-- Prevent browser caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="styling.css?v=<?php echo time(); ?>">
+    <script src="scripts.js?v=<?php echo time(); ?>" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>San Marcelino Ayala</h1>
+        </header>
+        <main class="main-content">
+            <!-- Left Panel: Charts -->
+            <section class="left-panel">
+                <div class="item">
+                    <h3>Hourly Vehicle Count</h3>
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://lookerstudio.google.com/embed/reporting/21742e1c-f773-46d9-ba9f-2feee6ac1ec7/page/FyBUE"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Daily Vehicle Count</h3>
+                    <div class="iframe-container">
+                        <iframe 
+                            src="https://lookerstudio.google.com/embed/reporting/5e1580a3-b0d4-49a8-b90a-baeea8f30411/page/FyBUE" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>All-Time Vehicle Count</h3>
+                    <div class="iframe-container">
+                        <iframe 
+                            src="https://lookerstudio.google.com/embed/reporting/30bc426d-a35a-4a32-9dbb-1561d61e8495/page/FyBUE" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Video Feeds -->
+            <section class="right-panel">
+                <div class="item">
+                    <h3>Live Video Feed A</h3>
+                    <img src="rpiA.jpg?timestamp=<?php echo time(); ?>" id="liveFeedA" alt="Live Feed A">
+                    <p><strong>Timestamp:</strong> <span id="timestampA">Loading...</span></p>
+                    <p><strong>Location:</strong> San Marcelino Ayala</p>
+                </div>
+                <div class="item">
+                    <h3>Live Video Feed B</h3>
+                    <img src="rpiB.jpg?timestamp=<?php echo time(); ?>" id="liveFeedB" alt="Live Feed B">
+                    <p><strong>Timestamp:</strong> <span id="timestampB">Loading...</span></p>
+                    <p><strong>Location:</strong> San Marcelino Ayala</p>
+                </div>
+                <div class="item">
+                    <h3>Live Video Feed C</h3>
+                    <img src="rpiC.jpg?timestamp=<?php echo time(); ?>" id="liveFeedC" alt="Live Feed C">
+                    <p><strong>Timestamp:</strong> <span id="timestampC">Loading...</span></p>
+                    <p><strong>Location:</strong> San Marcelino Ayala</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
